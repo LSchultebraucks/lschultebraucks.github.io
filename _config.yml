@@ -3,7 +3,7 @@ title_left    : "Lasse "
 title_right   : "Schultebraucks"
 description   : "Lasse Schultebraucks | Homepage and Blog"
 keywords      : "developer, blog, homepage, java, solution, programming"
-url           : "https://www.lasseschultebraucks.com"
+url           : "//lasseschultebraucks.com"
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
