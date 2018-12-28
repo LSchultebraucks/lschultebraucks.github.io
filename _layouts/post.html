@@ -8,6 +8,7 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
   </header>
   <div class="post-content" itemprop="articleBody">
+    <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
     {{ content }}
     {% include post-share.html %}
   </div>
