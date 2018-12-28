@@ -3,6 +3,7 @@ layout: post
 title: "Building a REST API with mongoose" 
 author: "Lasse Schultebraucks"
 categories:  JavaScript
+thumbnail: "/assets/mongodb.png"
 ---
 
 Mongoose is a node module and works as an API for MongoDB, which is a NoSQL database. With the power of mongoose you can easily write schemas for your MongoDB database and perform CRUD operations on it.
