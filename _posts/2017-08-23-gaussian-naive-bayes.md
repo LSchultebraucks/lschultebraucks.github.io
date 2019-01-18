@@ -2,6 +2,7 @@
 layout: post
 title: "Gaussian Naive Bayes"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 So I currently learning some machine learning stuff and therefore I also exploring some interesting algorithms I want to share here. This time I want to talk about the Gaussian Naive Bayes algorithm, which is a simple classification algorithm which is based on the Bayes' theorem.

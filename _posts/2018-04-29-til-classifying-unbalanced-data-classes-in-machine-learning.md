@@ -3,6 +3,7 @@ layout: post
 title: "TIL: Classifying unbalanced data classes in Machine Learning"
 author: "Lasse Schultebraucks"
 categories:  Machine Learning
+comments: true
 ---
 
 With this blog post I introduce a new post category on my blog: *Today I Learned* or short *TIL*. 

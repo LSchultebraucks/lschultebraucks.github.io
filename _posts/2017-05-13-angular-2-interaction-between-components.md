@@ -2,7 +2,8 @@
 layout: post
 title: "Angular 2: Interaction between components"
 author: "Lasse Schultebraucks"
----
+comments: true
+
 
 In Angular 2 there are different way to communicate between components. If you use Angular 2 regularly it is very important to know multiple possibilities to do this and also when you use which way to get an interaction between your components. Therefore I write about three possibilities in this blog post and also explain what are the advantages/disadvantages of them and when you should use which solution to build a clean and simple Angular 2 application. We will discuss about:
 

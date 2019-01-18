@@ -3,6 +3,7 @@ layout: post
 title: "How I plan my days with Todoist and Google Calendar"
 author: "Lasse Schultebraucks"
 categories: [Life, Work, University, Productivity]
+comments: true
 ---
 
 Life can be very stressful, there are so many things to do. Therefore it is very helpful to always keep up with your tasks and organize them as best as possible. 

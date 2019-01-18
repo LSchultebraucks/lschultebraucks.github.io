@@ -2,6 +2,7 @@
 layout: post
 title: "Data Visualization with Python"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 This blog post is part of a series, where I talk about concepts and algorithms in Machine Learning.  In this blog post I do not want to talk about any concept or algorithm, but about data visualization with Python. Data Visualization with Python is very important, especially for Machine Learning, because you want to explore your data and gain knowledge about the data set you work with, so that you can select good features. I won't explain the following plots and charts in depth, because most of them are very similar and should just give you some ideas how you can plot your data. You will find all examples of the following plots and charts on [GitHub](https://github.com/LSchultebraucks/matplotlib_examples).

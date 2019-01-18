@@ -3,6 +3,7 @@ layout: post
 title: "TIL: Cost functions for linear regression"
 author: "Lasse Schultebraucks"
 categories:  Machine Learning
+comments: true
 ---
 
 Today I learned about cost functions, which are also known as mean square error (MSE), for linear regression problems.

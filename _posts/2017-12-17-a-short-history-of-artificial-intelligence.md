@@ -2,6 +2,7 @@
 layout: post
 title: A Short History of Artificial Intelligence
 categories: [AI, Machine Learning]
+comments: true
 ---
 
 What is Artificial Intelligence? What has Artificial Intelligence reached in the past? What are appreciable milestones of Artificial Intelligence in the last years? What will Artificial Intelligence solve in 5 years, 20 years, 50 years or 100 years from now? And how will look Artificial Intelligence the future?

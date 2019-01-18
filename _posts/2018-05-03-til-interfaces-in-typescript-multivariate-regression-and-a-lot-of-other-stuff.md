@@ -3,6 +3,7 @@ layout: post
 title: "TIL: Interfaces in TypeScript, Multivariate Regression and DFAs."
 author: "Lasse Schultebraucks"
 categories:  TIL
+comments: true
 ---
 
 Today I learned (and yesterday) about Interfaces in TypeScript and how you can use them correctly to use them as your DTO in you application,

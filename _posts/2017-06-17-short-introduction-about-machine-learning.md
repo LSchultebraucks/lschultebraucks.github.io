@@ -3,6 +3,8 @@ layout: post
 title: "Short Introduction about Machine Learning"
 author: "Lasse Schultebraucks"
 categories: [Machine Learning,  Python]
+comments: true
+
 ---
 
 In this blog post, I want to give a short introduction about machine learning. I want to answer the questions what machine learning is, what problems machine learning faces and what machine learning algorithms are trying to solve. This will be just theoretical and should give a short introduction to the topic. I will talk about the definition of machine learning, different categories and types of machine learning problems and algorithms and last but not least about the challenges you face, if you want to develop a machine learning algorithm. I hope you will have fun and learn something new!

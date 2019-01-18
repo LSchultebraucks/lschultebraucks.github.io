@@ -2,6 +2,7 @@
 layout: post
 title: "Testing services in Angular"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 Testing in Software Development is essential. In this blog post I will demonstrate how Testing in Angular works by testing a service with Jasmine and Karma by build a simple Angular application. I also try to answer the question why and how to test.

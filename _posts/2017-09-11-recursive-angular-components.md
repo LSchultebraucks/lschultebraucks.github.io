@@ -2,6 +2,7 @@
 layout: post
 title: "Recursive Angular components"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 Recursion is a well known concept in Software Development and is a useful tool when it comes to algorithms which use e.g. divide an conquer to solve a problem recursively. But beside standard algorithms you can also use them in Angular components to build recursive components. It's actually really simple and useful.

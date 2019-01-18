@@ -2,6 +2,7 @@
 layout: post
 title: "The Problem of overfitting and underitting"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 This blog post is part of a series, where I talk about concepts and algorithms in Machine Learning.

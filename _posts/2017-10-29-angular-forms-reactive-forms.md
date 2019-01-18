@@ -2,6 +2,7 @@
 layout: post
 title: "Angular Forms: Reactive Forms"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 In last weeks blog post I have talked about the template-driven form approach in Angular. Beside why using forms I have also explained how to use template driven forms in Angular, how to use validation in template driven forms and what the advantages and disadvantages are. In this weeks blog post I want to show you how to use reactive forms in Angular.

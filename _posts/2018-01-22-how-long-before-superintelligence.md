@@ -2,6 +2,7 @@
 layout: post
 title: "How long before superintelligence?"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 Superintelligence is an AI which can outperform humans in every field. There are already AIs like AlphaGo (Zero) which had defeated the world best Go player, so AlphaGo seems like a smart AI, which in terms of a superintelligent AI it is not. Today there are only AIs which are at the very beginning. There are already AIs which are production ready and help experts in different branches like medicine, but there is not even close to an AI which can substitute an expert like a doctor. And occupation is not everything. Human intelligence is spread over many disciplines. Actually the term intelligence is not quite defined. In my opinion intelligence in terms of human intelligence can be measured by different aspects like problem solving and creativity, but also emotional intelligence.

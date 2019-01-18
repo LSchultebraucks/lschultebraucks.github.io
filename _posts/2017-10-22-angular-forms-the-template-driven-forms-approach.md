@@ -2,6 +2,7 @@
 layout: post
 title: "Angular Forms: The template-driven form approach"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 In Angular there existing two ways to create and use forms. To clear things up, I want to talk about both ways. In this post I want to talk about the Template-driven Form approach. In the next week blog post I will talk about Reactive Forms.

@@ -2,6 +2,8 @@
 layout: post
 title: "Why Python is probably the programming language for dealing with Big Data"
 author: "Lasse Schultebraucks"
+comments: true
+
 ---
 
 Python is a very amazing programming language and is very popular these days, so you have probably heard about Python already, you have tried it out or you use it even as your main programming language at work. Therefore I want to talk in this blog post why Python is the language (or at least one great language) when it comes to dealing and working with Big data.

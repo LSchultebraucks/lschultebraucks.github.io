@@ -3,6 +3,7 @@ layout: post
 title: "Don't Think Technology orientated - Think Solution orientated"
 author: "Lasse Schultebraucks"
 categories: [Life, Work]
+comments: true
 ---
 
 A problem I always had and I think every developer has is that the amount of diverse and interesting technologies out there is huge.

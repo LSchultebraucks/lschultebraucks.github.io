@@ -2,6 +2,7 @@
 layout: post
 title: "Superintelligence can break out"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 We don't know if and if so, when there will be superintelligence. But let's imagine there is superintelligence. Can we control it? Can we control it like a slave and prevent that it get free access on the internet? Can we prevent that superintelligence do not do anything what we do not want?

@@ -3,6 +3,7 @@ layout: post
 title: "TIL: Minimizing cost functions with gradient descent"
 author: "Lasse Schultebraucks"
 categories:  Machine Learning
+comments: true
 ---
 
 Today I learned about gradient descent and how you can minimize cost function for liner regression problems with gradient descent.

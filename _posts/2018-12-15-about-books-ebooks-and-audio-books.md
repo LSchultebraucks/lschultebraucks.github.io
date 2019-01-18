@@ -3,6 +3,8 @@ layout: post
 title: "About books, e-Books and audio books"
 author: "Lasse Schultebraucks"
 categories: [Life, Books]
+comments: true
+
 ---
 
 In the following post I want to discuss some aspects about books, e-books and audio books. 

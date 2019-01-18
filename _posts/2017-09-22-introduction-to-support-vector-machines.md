@@ -2,6 +2,7 @@
 layout: post
 title: Support Vector Machines (SVM)
 categories: [Python, Machine Learning]
+comments: true
 ---
 
 This blog post is part of a series, where I talk about concepts and algorithms in Machine Learning. In this part I want to talk about another popular algorithm, which is widely used for solving classification and regression problems. I am of course talking about Support Vector Machines (SVM).

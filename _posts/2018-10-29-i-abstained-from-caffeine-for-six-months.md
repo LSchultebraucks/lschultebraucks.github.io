@@ -3,6 +3,7 @@ layout: post
 title: "I abstained from caffeine for six months"
 author: "Lasse Schultebraucks"
 categories: Life
+comments: true
 ---
 
 From mid march to mid september this year I abstained from caffeine. So a total period of 6 months or 26 weeks or 180 days of abstinence from all kind of Coffee, Black Tea, Cola or Energy Drinks.

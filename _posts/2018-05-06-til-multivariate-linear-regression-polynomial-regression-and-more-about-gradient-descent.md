@@ -3,6 +3,7 @@ layout: post
 title: "TIL: Multivariate Linear Regression, Polynomial Regression and more about Gradient Descent"
 author: "Lasse Schultebraucks"
 categories: Machine Learning
+comments: true
 ---
 
 Today I learned about Multivariate Linear Regression, Polynomial Regression and more about Gradient Descent.

@@ -2,6 +2,7 @@
 layout: post
 title: "Angular: Common Http Client"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 With the last major release of Angular to Angular 4.3 there came a new feature to the Angular framework: The new Angular [HttpClient](https://angular.io/guide/http/). In the following blog post I want to show you how to use the new Angular HttpClient.

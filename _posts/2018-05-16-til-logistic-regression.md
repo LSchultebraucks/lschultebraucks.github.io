@@ -3,6 +3,7 @@ layout: post
 title: "TIL: Logistic Regression"
 author: "Lasse Schultebraucks"
 categories: Machine Learning
+comments: true
 ---
 
 In the last few days I learned about Logistic Regression as one method to solve classification problems.

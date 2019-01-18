@@ -2,6 +2,7 @@
 layout: post
 title: "Strategic and operational management"
 author: "Lasse Schultebraucks"
+comments: true
 ---
 
 I currently hear a couple of subsidiary subjects for my Computer Science study.
