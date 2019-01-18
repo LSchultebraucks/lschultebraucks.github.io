@@ -10,6 +10,7 @@ cover         : "" # image uri like logo/cover image for site seo
 google_analytics  : UA-85460605-1
 twitter_username  : "LSchultebraucks"
 comments_enabled  : true # if enabled (set to true), please provide your disqus_username
+disqus_username   : "Lasse Schultebraucks"
 disqus_shortname  : "LasseSchultebraucks"
 postshare_enabled : true
 
