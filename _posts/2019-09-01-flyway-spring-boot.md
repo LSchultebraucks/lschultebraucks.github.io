@@ -12,7 +12,7 @@ In the following I will show you in a demo application how to set up flyway in a
 
 First we need to create a fresh spring boot application. You can also add Flyway to your spring boot application if you are already in development or in production and want to begin with database migrations. 
 
-You can create a fresh spring boot application with the [spring initializer](https://start.spring.io/). As dependencies choose Web, JPA, Flyway and PostgreSQL. That is all you need in the beginning. I started added a Book entity.
+You can create a fresh spring boot application with the [spring initializer](https://start.spring.io/). As dependencies choose Web, JPA, Flyway and PostgreSQL. That is all you need in the beginning. I started with adding a Book entity.
 
 ```java
 package com.lasseschultebraucks.flyway.demo.model;
@@ -50,7 +50,7 @@ public class Book {
 
 ```
 
-As you can see it already has JPA annotations on the class and on one attribute to mark the whole class as an database entity and the determine the primary key.
+As you can see it already has JPA annotations on the class and on one attribute to mark the whole class as a database entity and the determine the primary key.
 
 Next we can use PostgreSQL to set up a local database and to connect it to our application. Therefore we first need to [download and install PostgreSQL](https://www.postgresql.org/download/). After the installation you can start pgAdmin, add a user (with username/password `admin`) and create a new database named `flyway-core` and owner `admin`.
 
@@ -178,7 +178,7 @@ ALTER TABLE public.hibernate_sequence
     OWNER TO admin;
 ```
 
-The first two queries will create a author table and create a foregin key constraint in book for the author id.
+The first two queries will create an author table and create a foreign key constraint in book for the author id.
 
 The last query will create a hibernate sequence. A hibernate sequence manage the id numbers in our database, so that no entity has equals ids. We need this because in our next step we will insert data in our database:
 
