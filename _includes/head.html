@@ -103,7 +103,7 @@
   {%- if site.plainwhite.analytics_id -%}
     <script>
         if (window.cookieAccecpted) {
-            document.write('<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"><\/script>');
+            document.write('<script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics }}"><\/script>');
 
             window.dataLayer = window.dataLayer || [];
 
@@ -112,7 +112,7 @@
             }
             gtag('js', new Date());
 
-            gtag('config', '{{ site.plainwhite.analytics_id }}');
+            gtag('config', '{{ google_analytics   }}');
         }
     </script>
   
