@@ -1,0 +1,95 @@
+<style>
+    #cookie-notice {
+        padding: 7px 15px;
+        display: none;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #222;
+        color: rgba(255, 255, 255, 0.8);
+        z-index: 10000;
+    }
+    
+    #cookie-text {
+        margin-bottom: 5px;
+    }
+
+    #cookie-text>div>a {
+        color: #7c98ff;
+    }
+    
+    #cookie-notice>a {
+        cursor: pointer;
+        margin-left: 10px;
+        background-color: #e3e3e3;
+        border-color: #e3e3e3;
+        color: #222;
+    }
+    
+    @media (max-width: 767px) {
+        #cookie-text>div {
+            display: block;
+            padding-top: 3px;
+            margin-bottom: 13px;
+        }
+        #cookie-notice>a {
+            position: relative;
+            bottom: 4px;
+        }
+    }
+</style>
+<div id="cookie-notice">
+    <div id="cookie-text">
+        <div>I use third party scripts to improve the functionality of this website. These scripts use some cookies.
+        Namely I first use the Cloudflare-Protection which requires a <a href="https://support.cloudflare.com/hc/en-us/articles/200170156-What-does-the-Cloudflare-cfduid-cookie-do-">cookie</a> that can't be disabled.
+        Also I use Google-Analytics as an indicator for how often the side is visited which also requires a few <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id">cookies</a>.
+        Last but not least I use Disqus as a commenting-framework which requires additional <a href="https://help.disqus.com/en/articles/1717155-use-of-cookies">cookies</a>.
+        Most of the Google-Analytics-Cookies and all the Disqus-Cookies can be disabled by clicking the "Decline"-Button. </div>
+    </div>
+    <a id="cookie-notice-decline" class="btn btn-primary btn-sm">Decline</a>
+    <a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a>
+</div>
+<script>
+    var cookieAccecpted = false;
+
+    function createCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name, "", -1);
+    }
+
+    if (readCookie('cookie-notice-dismissed') == 'true') {
+        cookieAccecpted = true;
+    } else {
+        cookieAccecpted = false;
+        $('#cookie-notice').show();
+    }
+    $('#cookie-notice-accept').click(function() {
+        createCookie('cookie-notice-dismissed', 'true', 31);
+        $('#cookie-notice').hide();
+        location.reload();
+    });
+    $('#cookie-notice-decline').click(function() {
+        $('#cookie-notice').hide();
+    });
+</script>
