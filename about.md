@@ -6,7 +6,7 @@ permalink: /about/
 
 ![](https://avatars0.githubusercontent.com/u/10197773?s=400&u=c5563e6ad24b62cc8d4542fe62497b6b77667df3&v=4)
 
-Hi there, my name is Lasse and I am 21 years old.
+Hi there, my name is Lasse and I am 22 years old.
 
 I am studying Computer Science since October 2016. In March 2017 I started to work at Brockhaus AG as a Software Developer beside University.
 
