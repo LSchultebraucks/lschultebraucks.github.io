@@ -1,7 +1,7 @@
 # Site settings
 title_left    : "Lasse "
 title_right   : "Schultebraucks"
-description   : " | Homepage and Blog"
+description   : "Blog"
 keywords      : "developer, blog, homepage, java, solution, programming"
 url           : "//lasseschultebraucks.com"
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank

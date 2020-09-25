@@ -6,12 +6,8 @@ permalink: /about/
 
 ![](https://avatars0.githubusercontent.com/u/10197773?s=400&u=c5563e6ad24b62cc8d4542fe62497b6b77667df3&v=4)
 
-Hi there, my name is Lasse and I am 21 years old.
+Hi there, my name is Lasse and I am 22 years old.
 
-I am studying Computer Science since October 2016. In March 2017 I started to work at Brockhaus AG as a Software Developer beside University.
+I have started studying Computer Science in October 2016. In March 2017 I started to work at BROCKHAUS AG as a software developer beside University. Since July 2020 I am working as a full time IT Consultant at BROCKHAUS AG.
 
-I am not focusing on specific technologies I want to learn. Of course I prefer some technologies over others, but I basically try
-to solve problems and think solution orientated instead of technology orientated. Nevertheless I am a big technology enthusiast and I love playing
-with all kind of technology.
-
-The forces me to know a bridge range of technologies which is exactly what I looking for and what makes the most fun to me.
+My tech stack is full stack and focuses on Java, JavaScript, TypeScript, Angular and Python to name a few.
