@@ -1,16 +1,20 @@
----
-layout: compress
-published: true
----
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  {% include head.html %}
-  <body>
-    <main class="wrapper">
-      {% include header.html %}
+
+{% include head.html %}
+
+<body>
+
+  <div class="container">
+    {% include header.html %}
+
+    <div class="post-container">
       {{ content }}
-      {% include footer.html %}
-    </main>
-    {% include foot.html %}
-  </body>
+    </div>
+
+    {% include footer.html %}
+
+  </div>
+
+</body>
 </html>

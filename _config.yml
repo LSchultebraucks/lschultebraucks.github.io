@@ -1,46 +1,29 @@
-# Site settings
-title_left    : "Lasse "
-title_right   : "Schultebraucks"
-description   : "Blog"
-keywords      : "developer, blog, homepage, java, solution, programming"
-url           : "//lasseschultebraucks.com"
-baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "" # image uri like logo/cover image for site seo
+# Site Build Settings
 
-google_analytics  : 'UA-85460605-1'
-twitter_username  : "LSchultebraucks"
-comments_enabled  : true # if enabled (set to true), please provide your disqus_username
-disqus_username   : "LasseSchultebraucks"
-disqus_shortname  : "lasseschultebraucks"
-postshare_enabled : true
+# Jekyll-paginate-v2 configuration
+#  pagination:
+#   enabled: true
+#   per_page: 5
+#   permalink: '/page/:num/'
+#   title: ':title - page :num of :max'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
+
+# jekyll-paginate configuration
+paginate:            5
 
 # Build settings
-markdown    : kramdown
-highlighter : rouge
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           'Lasse Schultebraucks'
+description:	       'IT Consultant'
+author:              'Lasse Schultebraucks'
 
-source      : ./
-destination : ./_site
-
-# Sass configuration
-sass:
-  sass_dir  : assets/scss
-  style     : compressed # expanded
-
-# Author settings
-author:
-  name     : "Lasse Schultebraucks"
-
-plugins:
-  - jekyll-sitemap
-  - bourbon
-  - jekyll-paginate
-
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
-
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md", "script"]
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml
