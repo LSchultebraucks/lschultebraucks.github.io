@@ -21,3 +21,7 @@ One milestone I would like to reach is my first 180. So far I have been playing 
 Darts is definitely not the sport that is effective to build muscles or improve his condition, however, through darts can improve his focus, concentration and fine motor skills.
 
 That's it for now, when I throw my first 180 I will definitely share it on Twitter. Otherwise, in the next times I will write about different topics, technical and non-technical.
+
+Edit: I did it!
+
+{% twitter https://twitter.com/LSchultebraucks/status/1383047550685577217 %}
