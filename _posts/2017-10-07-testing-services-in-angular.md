@@ -225,9 +225,6 @@ We will only have one component in our Angular application. The template will lo
 
 ```html
 <div class="container">
-  <h1>
-    There are {{appService.getSize()}} items in the list
-  </h1>
   <form [formGroup]="form">
     <div class="form-group">
       <div class="row">
