@@ -22,6 +22,6 @@ Darts is definitely not the sport that is effective to build muscles or improve 
 
 That's it for now, when I throw my first 180 I will definitely share it on Twitter. Otherwise, in the next times I will write about different topics, technical and non-technical.
 
-Edit: I did it!
+Edit: [I did it](https://twitter.com/LSchultebraucks/status/1383047550685577217)!
 
-{% twitter https://twitter.com/LSchultebraucks/status/1383047550685577217 %}
+![]({{site.url}}/assets/dart180.jpg)
