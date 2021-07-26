@@ -3,7 +3,7 @@ layout: page
 title: Hi 👋, I am Lasse Schultebraucks
 ---
 
-I am a 22 years old IT Consultant at [BROCKHAUS AG](https://www.brockhaus-ag.de/). My tech stack focuses on Java ☕, Spring Boot, JavaScript, TypeScript, Angular and also some Python 🐍.
+I am a 23 years old IT Consultant at [BROCKHAUS AG](https://www.brockhaus-ag.de/). My tech stack focuses on Java ☕, Spring Boot, JavaScript, TypeScript, Angular and also some Python 🐍.
 
 - 🔭 I’m currently working on some personal projects with Docker and Raspberry Pi 4.
 - 🌱 I’m currently learning about cloud technologies like Docker and k8s and also some Linux.
