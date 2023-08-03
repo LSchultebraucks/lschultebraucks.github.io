@@ -113,7 +113,7 @@ Animal cat = AnimalFactory.createAnimal("cat");
 cat.makeSound(); // Output: Meow!
 ```
 
- # 3. Adapter Pattern (Structural):
+# 3. Adapter Pattern (Structural):
 The Adapter Pattern is a structural pattern that allows two incompatible interfaces to work together. It acts as a mediator to facilitate communication between the classes and promotes reusability of existing code.
 
 ## Example in Java:
