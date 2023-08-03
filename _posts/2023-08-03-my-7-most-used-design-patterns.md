@@ -215,7 +215,7 @@ computerFacade.start();
 // Processing data...
 ```
 
-# 5. Decorator Pattern (Structural):**
+# 5. Decorator Pattern (Structural):
 The Decorator Pattern is a structural pattern that allows for flexible object extension at runtime. It enables adding additional functionality and responsibilities to an object without modifying its structure.
 
 ## Example in Java:
