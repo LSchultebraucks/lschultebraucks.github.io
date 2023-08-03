@@ -13,18 +13,18 @@ First of all, design patterns are divided into three different categories.
 # 1. Creational Patterns
 These patterns deal with the creation of objects. They allow instantiation of classes and objects in a flexible and loosely coupled manner. Creational patterns isolate the code from the specific class being created and allow the creation of objects to be delegated to subclasses or configurations. The main goals are decoupling and flexibility in object creation.
 
-# 2. Structural Patterns:
+# 2. Structural Patterns
 Structural Patterns deal with the organization of classes and objects in larger structures. They emphasize how classes and objects are put together to create new structures that are easier to use and manage. These patterns help improve relationships between classes, increase reusability, and make the structure more flexible.
 
-# 3. Behavioral Patterns:
+# 3. Behavioral Patterns
 Behavioral patterns deal with the interaction and communication between classes and objects. They define the way different objects cooperate and communicate with each other to accomplish specific tasks. These patterns define how the behavior of classes is organized and how responsibilities are distributed.
 
 Here are my seven most frequently used design patterns, which I have applied in different projects time and again.
 
-# 1. Builder Pattern (Creational):
+# 1. Builder Pattern (Creational)
 The Builder Pattern is a creational pattern that simplifies the construction of complex objects by using a step-by-step approach. It separates the object construction from its representation, resulting in cleaner and more readable code.
 
-## Example in Java: 
+### Example in Java:
 ```java
 public class Computer {
     private String cpu;
@@ -73,10 +73,10 @@ Computer computer = new ComputerBuilder()
                         .build();
 ```
 
-# 2. Factory Pattern (Creational):
+# 2 Factory Pattern (Creational)
 The Factory Pattern is another creational pattern that provides an interface for creating objects without revealing the specific implementations. It allows for a flexible and loosely coupled way of object creation.
 
-## Example in Java:
+### Example in Java
 ```java
 interface Animal {
     void makeSound();
@@ -113,10 +113,10 @@ Animal cat = AnimalFactory.createAnimal("cat");
 cat.makeSound(); // Output: Meow!
 ```
 
-# 3. Adapter Pattern (Structural):
+# 3. Adapter Pattern (Structural)
 The Adapter Pattern is a structural pattern that allows two incompatible interfaces to work together. It acts as a mediator to facilitate communication between the classes and promotes reusability of existing code.
 
-## Example in Java:
+### Example in Java:
 ```java
 // Legacy code with incompatible interface
 interface OldPrinter {
@@ -163,10 +163,10 @@ NewPrinter adaptedPrinter = new PrinterAdapter(legacyPrinter);
 adaptedPrinter.printFormattedText("Hello, World!"); // Output: Hello, World!
 ```
 
-# 4. Facade Pattern (Structural):
+# 4. Facade Pattern (Structural)
 The Facade Pattern is another structural pattern that provides a simplified interface for a complex subsystem. It acts as a kind of "facade" for the underlying components, enabling easier usage and management.
 
-## Example in Java:
+### Example in Java:
 ```java
 // Complex subsystems
 class CPU {
@@ -215,10 +215,10 @@ computerFacade.start();
 // Processing data...
 ```
 
-# 5. Decorator Pattern (Structural):
+# 5. Decorator Pattern (Structural)
 The Decorator Pattern is a structural pattern that allows for flexible object extension at runtime. It enables adding additional functionality and responsibilities to an object without modifying its structure.
 
-## Example in Java:
+### Example in Java
 ```java
 // Component interface
 interface Coffee {
@@ -298,10 +298,10 @@ System.out.println("Cost: " + coffeeWithMilkAndWhip.getCost() + ", Description: 
 // Cost: 3.5, Description: Simple Coffee, Milk, Whip
 ```
 
-# 6. Composite Pattern (Structural):
+# 6. Composite Pattern (Structural)
 The Composite Pattern is another structural pattern that allows objects to be treated as individual objects or object hierarchies uniformly. It enables working with objects as part-whole hierarchies, making the treatment of individual and group objects more straightforward.
 
-## Example in Java:
+### Example in Java
 ```java
 // Component interface
 interface Graphic {
@@ -347,10 +347,10 @@ graphicGroup.draw();
 // Drawing a square
 ```
 
-# 7. Delegation Pattern (Behavioral):
+# 7. Delegation Pattern (Behavioral)
 The Delegation Pattern is a behavioral pattern that delegates responsibilities to another object instead of handling them itself. It promotes loose coupling and efficient distribution of tasks.
 
-## Example in Java:
+### Example in Java:
 ```java
 // Service interface
 interface Printer {
