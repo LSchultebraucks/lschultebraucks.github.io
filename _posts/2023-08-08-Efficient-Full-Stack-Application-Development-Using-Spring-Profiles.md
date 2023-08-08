@@ -86,4 +86,6 @@ public class AdminController {
 ```
 # Conclusion
 
+Checkout [the official Spring Documentation](https://docs.spring.io/spring-boot/docs/1.2.0.M1/reference/html/boot-features-profiles.html) to learn more about Profiles in Spring.
+
 The utilization of Spring Profiles streamlines the development of full-stack applications. In the scenario described above, by leveraging profiles, you can override the `UserService` implementation, simplifying work on admin functionalities during development. This allows you to swiftly and seamlessly develop the desired features without compromising production logic. Spring Profiles thus provide an elegant solution for managing complex application scenarios and enhancing development efficiency.
