@@ -505,3 +505,120 @@ th, td {
 .fa-rss-square:hover {
 	color: #ff6600;
 }
+
+
+/*
+  Theme toggle switch (Light left, Dark right)
+*/
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 64px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: #f7e7a3; /* light state base; overridden by aria-pressed */
+  color: transparent;
+  cursor: pointer;
+  z-index: 1000;
+  display: inline-block;
+  vertical-align: middle;
+  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+/* show icons; place at knob centers */
+.theme-toggle .icon-moon,
+.theme-toggle .icon-sun {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  line-height: 1;
+  z-index: 1; /* above knob */
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+/* centers for left/right knob */
+.theme-toggle .icon-sun { left: 18px; color: #ffffff; }
+.theme-toggle .icon-moon { left: 46px; color: #ffffff; }
+
+/* knob */
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  background: #e7b52a; /* light knob */
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  transition: transform .25s ease, background-color .25s ease;
+}
+
+/* Visual states controlled by aria-pressed */
+/* Light (left) */
+.theme-toggle[aria-pressed="false"] { background: #f7e7a3; border-color: #f0d98a; }
+.theme-toggle[aria-pressed="false"]::after { background: #e0b029; transform: translateX(0); }
+.theme-toggle[aria-pressed="false"] .icon-sun { opacity: 1; }
+.theme-toggle[aria-pressed="false"] .icon-moon { opacity: 0; }
+
+/* Dark (right) */
+.theme-toggle[aria-pressed="true"] { background: #0f3345; border-color: #0a2634; }
+.theme-toggle[aria-pressed="true"]::after { background: #24a6ff; transform: translateX(28px); }
+.theme-toggle[aria-pressed="true"] .icon-sun { opacity: 0; }
+.theme-toggle[aria-pressed="true"] .icon-moon { opacity: 1; }
+
+/* hover */
+.theme-toggle:hover { opacity: 0.96; }
+
+/* Focus: remove outline on mouse click, keep for keyboard */
+.theme-toggle:focus { outline: none; }
+.theme-toggle:focus-visible { outline: 2px solid #6aa0ff; outline-offset: 2px; }
+
+/*
+  Dark theme overrides
+  Applied when <html> has class "theme-dark" (set via JS). Default is dark.
+*/
+.theme-dark body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+  color: #f0f0f0;
+}
+.theme-dark a { color: #9ecbff; }
+.theme-dark a:hover { color: #cde3ff; }
+
+.theme-dark .masthead-title a { color: #e0e0e0; }
+.theme-dark .masthead a:hover { color:#ffffff; }
+.theme-dark .masthead-subtitle { color: #bbbbbb; }
+
+.theme-dark blockquote { border-left-color: #444; color: #bbbbbb; }
+.theme-dark hr { border-top-color: #333; }
+
+.theme-dark .pagination-button { color: #bbbbbb; border-color: #333; }
+.theme-dark .pagination-active { color: #ffffff; }
+.theme-dark .pagination-active:hover { background-color: #333; }
+
+.theme-dark .footer { color: #bbbbbb; }
+.theme-dark .footer a { color: #bbbbbb; }
+.theme-dark .footer a:hover { color: #e0e0e0; }
+
+.theme-dark .menu-content a,
+.theme-dark .social-icons a { color: #bbbbbb; }
+
+/* code blocks */
+.theme-dark code { background-color: #1e1e1e; color: #dddddd; }
+.theme-dark pre { background-color: #1e1e1e; }
+
+/* Do not override switch colors in dark pages; rely on aria-pressed state */
+.theme-dark .theme-toggle { color: transparent; }
+.theme-dark .theme-toggle::after { box-shadow: 0 2px 6px rgba(0,0,0,.6); }
