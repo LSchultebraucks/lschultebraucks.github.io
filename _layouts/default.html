@@ -28,12 +28,20 @@
       }
       function toggleTheme() {
         var root = document.documentElement;
+        var btn = document.getElementById('theme-toggle');
         var isDark = root.classList.contains('theme-dark');
         var next = isDark ? 'light' : 'dark';
+
+        // Add pulse animation
+        if (btn) btn.classList.add('changing');
+
         root.classList.remove('theme-dark','theme-light');
         root.classList.add(next === 'dark' ? 'theme-dark' : 'theme-light');
         try { localStorage.setItem('theme', next); } catch(e) {}
         applyIcon();
+
+        // Remove pulse animation after completion
+        if (btn) setTimeout(() => btn.classList.remove('changing'), 300);
       }
       document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('theme-toggle');
@@ -81,6 +89,46 @@
       } else {
         updateExperienceText();
       }
+    })();
+
+    // Scroll animations
+    (function() {
+      if (!('IntersectionObserver' in window)) return;
+
+      const animateOnScroll = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.post-item, .posts h1, .post-container > *');
+        elements.forEach(el => {
+          el.classList.add('animate-on-scroll');
+          animateOnScroll.observe(el);
+        });
+      });
+    })();
+
+    // Page transitions
+    (function() {
+      document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('page-loaded');
+      });
+
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && !link.target && link.hostname === window.location.hostname) {
+          e.preventDefault();
+          document.body.classList.add('page-transitioning');
+          setTimeout(() => { window.location = link.href; }, 250);
+        }
+      });
     })();
   </script>
 
