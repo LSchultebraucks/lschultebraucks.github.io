@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Lasse is an IT Consultant at [BROCKHAUS AG](https://www.brockhaus-ag.de/) with over 4 years of experience in developing full-stack software for insurance and financial companies.
+Lasse is an IT Consultant at [BROCKHAUS AG](https://www.brockhaus-ag.de/) with over <span id="years-experience" data-start-date="{{ site.data.settings.career.start_date }}">5 years</span> of experience in developing full-stack software for insurance and financial companies.
 
 ![lasse_profile_photo]({{site.url}}/assets/img/lasse.jpg)
 

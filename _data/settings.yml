@@ -26,3 +26,7 @@ sharing_button_prompt: 'Feel free to share!'
 related_posts: 'You may also enjoy:'
 
 post_date_prefix: 'Written on'
+
+# Career information
+career:
+  start_date: '2020-07-01'

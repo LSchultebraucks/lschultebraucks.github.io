@@ -43,6 +43,45 @@
         }
       });
     })();
+
+    // Experience calculation
+    (function() {
+      function calculateYearsExperience(startDateStr) {
+        if (!startDateStr) return null;
+
+        var startDate = new Date(startDateStr);
+        var today = new Date();
+
+        var years = today.getFullYear() - startDate.getFullYear();
+        var months = today.getMonth() - startDate.getMonth();
+
+        // Adjust if birthday hasn't occurred yet this year
+        if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
+          years--;
+        }
+
+        return years;
+      }
+
+      function updateExperienceText() {
+        var el = document.getElementById('years-experience');
+        if (!el) return;
+
+        var startDate = el.getAttribute('data-start-date');
+        var years = calculateYearsExperience(startDate);
+
+        if (years !== null && years > 0) {
+          el.textContent = 'over ' + years + ' year' + (years === 1 ? '' : 's');
+        }
+      }
+
+      // Run on page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateExperienceText);
+      } else {
+        updateExperienceText();
+      }
+    })();
   </script>
 
 </body>
