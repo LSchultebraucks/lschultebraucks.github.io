@@ -1,4 +1,142 @@
 ---
-layout: home
-title: Home
+layout: default
+title: About
 ---
+
+<div class="about-hero">
+  <div class="hero-grid">
+    <div class="profile-card">
+      <img src="{{site.url}}/assets/img/lasse.jpg" alt="Lasse Schultebraucks" class="profile-image">
+      <div class="profile-info">
+        <h1>Lasse Schultebraucks</h1>
+        <p class="subtitle">IT Consultant at <a href="https://www.brockhaus-ag.de/" target="_blank">BROCKHAUS AG</a></p>
+        <p class="experience"><span id="years-experience" data-start-date="{{ site.data.settings.career.start_date }}">Over 5 years</span> of experience in full-stack development</p>
+      </div>
+    </div>
+
+    <div class="blog-card-hero">
+      <a href="{{ site.github.url }}/menu/blog.html" class="blog-card-link">
+        <div class="blog-card-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <h3>Blog</h3>
+        <p>Read my latest articles and insights</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="expertise-grid">
+  <div class="expertise-card">
+    <div class="card-icon">🤖</div>
+    <h3>AI & Agentic Coding</h3>
+    <ul>
+      <li>Google Cloud Certified Generative AI Leader</li>
+      <li>Agentic Coding & AI-Assisted Development</li>
+      <li>Generative AI Solutions</li>
+    </ul>
+  </div>
+
+  <div class="expertise-card">
+    <div class="card-icon">⚙️</div>
+    <h3>Process Orchestration</h3>
+    <ul>
+      <li>Camunda 7 & 8 (BPMN, DMN, FEEL)</li>
+      <li>Workflow Automation (n8n)</li>
+      <li>Microservices Architecture</li>
+      <li>Java Spring (Spring Boot, Spring Batch)</li>
+    </ul>
+  </div>
+
+  <div class="expertise-card">
+    <div class="card-icon">☁️</div>
+    <h3>Cloud & DevOps</h3>
+    <ul>
+      <li>Microsoft Azure (AZ-204 Certified)</li>
+      <li>Google Cloud Platform</li>
+      <li>Cloud-Native Development</li>
+      <li>CI/CD Pipelines</li>
+    </ul>
+  </div>
+
+  <div class="expertise-card">
+    <div class="card-icon">🎯</div>
+    <h3>Agile & Architecture</h3>
+    <ul>
+      <li>Professional Scrum Master I</li>
+      <li>Professional Scrum Developer I</li>
+      <li>Software Architecture & Design</li>
+      <li>Full-Stack Development</li>
+    </ul>
+  </div>
+</div>
+
+<div class="certifications-section">
+  <div class="certifications-card">
+    <h3 class="certifications-title">Certifications</h3>
+    <div class="badges-grid">
+      <a href="https://www.credly.com/badges/cb7357ca-c481-4d92-8cc3-0cb87cf59fe2/public_url" target="_blank" class="badge-item badge-link">
+        <img src="https://templates.images.credential.net/16590187933301617801540872729153.png" alt="Google Cloud Generative AI" class="cert-badge">
+        <p class="badge-title">Google Cloud Generative AI Leader</p>
+      </a>
+      <a href="https://www.credly.com/badges/05ef80bf-d1ce-401a-9325-8cbaa081c6c9/public_url" target="_blank" class="badge-item badge-link">
+        <img src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-associate-badge.svg" alt="Azure Developer" class="cert-badge">
+        <p class="badge-title">Azure Developer Associate (AZ-204)</p>
+      </a>
+      <a href="https://www.credly.com/badges/6908f254-e9cc-4ef1-9672-a65c47f811a0/public_url" target="_blank" class="badge-item badge-link">
+        <img src="https://images.credly.com/images/413b6d6a-24d4-44ca-8e91-4a71e3d0c6e9/image.png" alt="Camunda Developer" class="cert-badge">
+        <p class="badge-title">Camunda Certified Developer</p>
+      </a>
+      <a href="https://www.credly.com/badges/85435039-ec78-4625-a02d-8aa30440fa99/public_url" target="_blank" class="badge-item badge-link">
+        <img src="https://static.scrum.org/web/badges/badge-psmi.svg" alt="Professional Scrum Master I" class="cert-badge">
+        <p class="badge-title">Professional Scrum Master I</p>
+      </a>
+      <a href="https://www.credly.com/badges/782567c5-9a81-4a79-91a5-7cacdd9d4a6d/public_url" target="_blank" class="badge-item badge-link">
+        <img src="https://static.scrum.org/web/badges/badge-psdi.svg" alt="Professional Scrum Developer I" class="cert-badge">
+        <p class="badge-title">Professional Scrum Developer I</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-section">
+  <div class="bottom-grid">
+    <div class="education-card-single">
+      <div class="education-icon">🎓</div>
+      <div class="education-content">
+        <h3>Education</h3>
+        <h4>B.Sc. Informatik</h4>
+        <p class="institution">Technische Universität Dortmund</p>
+        <p class="year">2016 - 2020</p>
+      </div>
+    </div>
+
+    <div class="publications-card">
+      <a href="https://www.brockhaus-ag.de/blog/camunda-vs-n8n-vergleich" target="_blank" class="publications-link">
+        <div class="publications-icon">
+          <i class="fa fa-file-text" aria-hidden="true"></i>
+        </div>
+        <div class="publications-content">
+          <h3>Publications</h3>
+          <h4>Camunda vs n8n im Vergleich für Versicherungen</h4>
+          <p class="publication-source">BROCKHAUS AG Blog</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section">
+  <h2>Get in Touch</h2>
+  <div class="contact-links">
+    <a href="https://github.com/LSchultebraucks" target="_blank" class="contact-link">
+      <i class="fa fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/lasse-schultebraucks-407b54175/" target="_blank" class="contact-link">
+      <i class="fa fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.xing.com/profile/Lasse_Schultebraucks/" target="_blank" class="contact-link">
+      <i class="fa fa-xing"></i> XING
+    </a>
+  </div>
+</div>
