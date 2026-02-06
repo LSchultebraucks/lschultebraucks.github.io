@@ -2,7 +2,7 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
+      {{ site.title }}
     {% else %}
       {{ page.title }} | {{ site.title }}
     {% endif %}
@@ -10,6 +10,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.svg' | relative_url }}">
 
   <!-- Theme boot script to avoid flash; default to dark -->
   <script>
