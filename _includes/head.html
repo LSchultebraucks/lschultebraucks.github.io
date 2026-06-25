@@ -60,38 +60,34 @@
   <!-- Use Jekyll SEO plugin -->
   {% seo %}
 
-  <!-- Fallback styles when JavaScript is disabled: default to Dark theme and hide the toggle -->
+  <!-- Fallback when JavaScript is disabled: apply the dark palette via the
+       same CSS variables the themed design uses, hide the toggle, and reveal
+       the body (which is opacity:0 until the page-loaded class is set by JS). -->
   <noscript>
     <style>
-      /* Hide non-functional theme toggle */
       #theme-toggle { display: none !important; }
+      body { opacity: 1 !important; }
 
-      /* Dark theme defaults without JS */
-      body { background-color: #121212; color: #e0e0e0; }
-      h1, h2, h3, h4, h5, h6 { color: #f0f0f0; }
-      a { color: #9ecbff; }
-      a:hover { color: #cde3ff; }
+      :root {
+        --bg-primary: #0b0b0f;
+        --bg-secondary: #14141b;
+        --bg-elevated: #1b1b24;
+        --bg-code: #15151c;
 
-      .masthead-title a { color: #e0e0e0; }
-      .masthead a:hover { color: #ffffff; }
-      .masthead-subtitle { color: #bbbbbb; }
+        --text-primary: #f5f5f7;
+        --text-secondary: #a1a1aa;
+        --text-tertiary: #71717a;
 
-      blockquote { border-left-color: #444; color: #bbbbbb; }
-      hr { border-top-color: #333; }
+        --accent-primary: #8b7cff;
+        --accent-hover: #a594ff;
+        --accent-subtle: #1d1a3a;
 
-      .pagination-button { color: #bbbbbb; border-color: #333; }
-      .pagination-active { color: #ffffff; }
-      .pagination-active:hover { background-color: #333; }
+        --border-light: #26262f;
+        --border-medium: #34343f;
+        --border-dark: #4a4a57;
 
-      .footer { color: #bbbbbb; }
-      .footer a { color: #bbbbbb; }
-      .footer a:hover { color: #e0e0e0; }
-
-      .menu-content a,
-      .social-icons a { color: #bbbbbb; }
-
-      code { background-color: #1e1e1e; color: #dddddd; }
-      pre { background-color: #1e1e1e; }
+        --glow: rgba(139, 124, 255, 0.16);
+      }
     </style>
   </noscript>
 
