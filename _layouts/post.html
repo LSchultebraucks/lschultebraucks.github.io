@@ -2,36 +2,50 @@
 layout: default
 ---
 
-<h1>
-  {{ page.title }}
-</h1>
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
-{% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
-{% endif %}
+  <h1 itemprop="headline">{{ page.title }}</h1>
 
-{{ content }}
+  <p class="post-meta">
+    {% include icon.html name="calendar" %}
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: "%B %-d, %Y" }}
+    </time>
+    &middot;
+    {% include icon.html name="clock" %}
+    {% include read-time.html content=page.content %}
+    {%- comment -%}
+      Tags, not categories: `categories` is part of the permalink and has grown
+      inconsistent over the years, while `tags` is the curated taxonomy that
+      also drives the blog index filter.
+    {%- endcomment -%}
+    {% if page.tags.size > 0 %}
+    &middot;
+    <span class="post-categories">
+      {% for tag in page.tags %}<span class="post-category">{{ tag }}</span>{% endfor %}
+    </span>
+    {% endif %}
+  </p>
 
-<span class="post-date">
-  {{ site.data.settings.post_date_prefix }}
-  {% assign d = page.date | date: "%-d"  %}
-  {{ page.date | date: "%B" }}
-  {% case d %}
-    {% when '1' or '21' or '31' %}{{ d }}st
-    {% when '2' or '22' %}{{ d }}nd
-    {% when '3' or '23' %}{{ d }}rd
-    {% else %}{{ d }}th{% endcase %},
-  {{ page.date | date: "%Y" }}
-  by
-  {% if page.author %}
-    {{ page.author }}
-  {% else %}
-    {{ site.author }}
+  {% if page.image %}
+    <img src="{{ '/assets/img/' | append: page.image | relative_url }}"
+         alt="{{ page.image_alt | default: page.title | escape }}"
+         class="post-hero" decoding="async" itemprop="image">
   {% endif %}
-</span>
+
+  <div class="post-body" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <p class="post-date">
+    {{ site.data.settings.post_date_prefix }}
+    {{ page.date | date: "%B %-d, %Y" }}
+    by
+    <span itemprop="author">{{ page.author | default: site.author }}</span>
+  </p>
+
+</article>
 
 {% include social-sharing.html %}
 
-{% if site.data.settings.disqus.comments %}
-  {% include disqus.html %}
-{% endif %}
+{% include related-posts.html %}

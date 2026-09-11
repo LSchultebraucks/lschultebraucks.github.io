@@ -14,18 +14,16 @@
 */
 
 /*
-  Web Fonts (self-hosted woff2)
-  Drop the listed files into assets/fonts/. Each @font-face degrades gracefully
-  to the next family in its var() stack if the file is missing.
-    - Inter[wght].woff2          -> Inter (body / UI)
-    - SpaceGrotesk[wght].woff2   -> Space Grotesk (headings / wordmark)
-    - Fraunces[wght].woff2       -> Fraunces (display / name)
+  Web Fonts (self-hosted woff2, latin subset)
+
+  Variable fonts, OFL-licensed, served from this origin — no third-party CDN,
+  so no external request is made on behalf of the visitor. Sources and how to
+  refresh them: assets/fonts/README.md
 */
 
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter[wght].woff2") format("woff2-variations"),
-       url("../fonts/Inter-Variable.woff2") format("woff2");
+  src: url("../fonts/Inter-Variable.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -33,8 +31,7 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: url("../fonts/SpaceGrotesk[wght].woff2") format("woff2-variations"),
-       url("../fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+  src: url("../fonts/SpaceGrotesk-Variable.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
@@ -42,8 +39,7 @@
 
 @font-face {
   font-family: "Fraunces";
-  src: url("../fonts/Fraunces[opsz,wght].woff2") format("woff2-variations"),
-       url("../fonts/Fraunces-Variable.woff2") format("woff2");
+  src: url("../fonts/Fraunces-Variable.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
@@ -612,11 +608,51 @@ th, td {
 }
 
 /*
+  Inline SVG icons (see _includes/icon.html)
+
+  Icons inherit font-size and colour from their parent, so no per-icon sizing
+  rules are needed. This replaces the Font Awesome CDN stylesheet and webfont.
+*/
+
+.icon {
+  display: inline-block;
+  vertical-align: -0.125em;
+  flex: none;
+}
+
+/*
   Social media icons
 */
 
+.sharing-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.25rem;
+}
+
 .sharing-icons a {
-  padding-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: all var(--duration-base) var(--ease-spring);
+}
+
+.sharing-icons a:hover {
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
+}
+
+.sharing-icons a::after {
+  display: none;
+}
+
+.social-icons {
+  font-size: 1.125rem;
 }
 
 .social-icons a {
@@ -673,19 +709,23 @@ th, td {
 
 /*
   Page Transitions
+
+  Handled entirely in CSS. The body is never hidden behind an opacity:0 gate
+  waiting for JavaScript, so first paint is not blocked and the page stays
+  readable without JS. Browsers that support the View Transitions API get a
+  cross-document fade for free; the rest simply navigate normally.
 */
 
-body {
-  opacity: 0;
-  transition: opacity var(--duration-base) var(--ease-in-out);
+@view-transition {
+  navigation: auto;
 }
 
-body.page-loaded {
-  opacity: 1;
-}
-
-body.page-transitioning {
-  opacity: 0;
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: var(--duration-base);
+    animation-timing-function: var(--ease-in-out);
+  }
 }
 
 /*
@@ -713,6 +753,7 @@ body.page-transitioning {
 .theme-toggle .icon-sun {
   position: absolute;
   top: 50%;
+  display: block;
   transform: translate(-50%, -50%);
   font-size: 14px;
   line-height: 1;
@@ -721,6 +762,9 @@ body.page-transitioning {
   transition: opacity .2s ease;
 }
 /* centers for left/right knob */
+.theme-toggle .icon-moon .icon,
+.theme-toggle .icon-sun .icon { vertical-align: top; }
+
 .theme-toggle .icon-sun { left: 16px; color: #ffffff; }
 .theme-toggle .icon-moon { left: 40px; color: #ffffff; }
 
@@ -1421,4 +1465,210 @@ body.page-transitioning {
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+/*
+  Skip link
+
+  Visually hidden until focused, so keyboard users can jump past the masthead
+  straight to the page content.
+*/
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-radius: 0 0 8px 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.skip-link::after {
+  display: none;
+}
+
+/*
+  Images
+
+  Every <img> carries width/height attributes so the browser can reserve the
+  right box before the file arrives — this is what keeps Cumulative Layout
+  Shift at zero. The rules below let those attributes drive the aspect ratio
+  while the rendered size stays fluid.
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  404
+*/
+
+.error-page {
+  padding: var(--space-16) 0;
+  text-align: center;
+}
+
+.error-page .error-code {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 18vw, 9rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent-primary);
+  opacity: 0.25;
+  letter-spacing: -0.04em;
+}
+
+.error-page h1 {
+  margin-top: var(--space-4);
+}
+
+.error-page .error-lead {
+  max-width: 46ch;
+  margin: var(--space-4) auto var(--space-8);
+  color: var(--text-secondary);
+}
+
+.error-page .hero-actions {
+  justify-content: center;
+}
+
+/*
+  Blog index — tag filter
+*/
+
+.post-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-6) 0 var(--space-8);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out),
+              color var(--duration-base) var(--ease-out);
+}
+
+.filter-chip:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.filter-chip.is-active {
+  background: var(--accent-subtle);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.filter-chip:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+.filter-count {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.post-year-group + .post-year-group {
+  margin-top: var(--space-8);
+}
+
+.filter-empty {
+  padding: var(--space-8) 0;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+/*
+  Post meta line
+*/
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  color: var(--text-tertiary);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+}
+
+.post-categories {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.post-category {
+  padding: 2px 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.post-hero {
+  display: block;
+  width: 100%;
+  margin: var(--space-8) 0;
+  border-radius: 12px;
+}
+
+/*
+  Related posts
+*/
+
+.related {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-light);
+}
+
+.related h2 {
+  margin-bottom: var(--space-4);
+  font-size: 1.125rem;
+}
+
+.related-posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-posts li + li {
+  margin-top: var(--space-3);
+}
+
+.related-posts .post-date {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-tertiary);
+  font-size: 0.8125rem;
 }

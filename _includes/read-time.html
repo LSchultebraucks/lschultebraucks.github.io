@@ -1,21 +1,16 @@
-{% if post.layout != post %}
-  {% assign words = post.content | strip_html | number_of_words %}
-  {% if words < 180 %}
-    less than 1 minute read
-  {% elsif words < 360 %}
-    1 minute read
-  {% else %}
-    {{ words | divided_by:180 }} minute read
-  {% endif %}
-{% endif %}
+{%- comment -%}
+  Estimated reading time at ~180 words per minute.
 
-{% if post.layout == post %}
-  {% assign words = content | number_of_words %}
-  {% if words < 180 %}
-    less than 1 minute read
-  {% elsif words < 360 %}
-    1 minute read
-  {% else %}
-    {{ words | divided_by:180 }} minute read
-  {% endif %}
-{% endif %}
+  `include.content` lets a caller pass the body explicitly; falling back to
+  `post.content` keeps the existing call sites in listings working, and
+  `page.content` covers a single post page.
+{%- endcomment -%}
+{%- assign body = include.content | default: post.content | default: page.content -%}
+{%- assign words = body | strip_html | number_of_words -%}
+{%- if words < 180 -%}
+less than 1 minute read
+{%- elsif words < 360 -%}
+1 minute read
+{%- else -%}
+{{ words | divided_by: 180 }} minute read
+{%- endif -%}

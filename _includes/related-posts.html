@@ -1,23 +1,34 @@
-<div class="related">
-  <h1 >{{ site.data.settings.related_posts }}</h1>
-  {% assign listed_posts_urls = page.url | split: ' ' %}
-  <ul class="related-posts">
-    {% for tag in page.tags %}
-      {% for mypost in site.tags[tag] limit:3 %}
-        {% if listed_posts_urls contains mypost.url %}
-        {% else %}
-          <li>
-            <h3>
-              <a href="{{ site.github.url }}{{ mypost.url }}">
-                {{ mypost.title }}
-                <!--<img src="{{ site.url }}{{ site.baseurl }}/images/{{ mypost.image.teaser }}">-->
-                <!--<small>{{ mypost.date | date: "%B %-d, %Y" }}</small>-->
-              </a>
-            </h3>
-          </li>
-          {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
+{%- comment -%}
+  "You may also enjoy" — up to three other posts sharing a tag with this one.
+
+  Deduplication is done against a delimited string of URLs rather than an
+  array, because `push` is not a standard Liquid filter. The whole block is
+  captured first so the heading is only emitted when something matched.
+{%- endcomment -%}
+{%- assign seen = '|' -%}
+{%- assign found = 0 -%}
+{%- capture related_items -%}
+  {%- for tag in page.tags -%}
+    {%- for candidate in site.tags[tag] -%}
+      {%- assign key = candidate.url | append: '|' -%}
+      {%- unless candidate.url == page.url or seen contains key -%}
+        {%- if found < 3 -%}
+          {%- assign seen = seen | append: key -%}
+          {%- assign found = found | plus: 1 -%}
+    <li>
+      <a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a>
+      <span class="post-date">{{ candidate.date | date: "%B %-d, %Y" }}</span>
+    </li>
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if found > 0 -%}
+<aside class="related">
+  <h2>{{ site.data.settings.related_posts }}</h2>
+  <ul class="related-posts">{{ related_items }}
   </ul>
-</div>
+</aside>
+{%- endif -%}

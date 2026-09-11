@@ -1,6 +1,6 @@
 <div class="post-date">{{ site.data.settings.sharing_button_prompt }}</div>
-  <div class="sharing-icons">
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-  </div>
+<div class="sharing-icons">
+  <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener noreferrer" aria-label="Share on X/Twitter">{% include icon.html name="twitter" %}</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">{% include icon.html name="linkedin" %}</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">{% include icon.html name="facebook" %}</a>
 </div>

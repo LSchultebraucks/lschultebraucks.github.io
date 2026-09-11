@@ -1,13 +1,13 @@
 <header class="masthead">
   <h3 class="masthead-title">
-    <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <small class="masthead-subtitle">{{ site.description }}</small>
   </h3>
   <div class="masthead-right">
     {% include menu.html %}
-    <button id="theme-toggle" class="theme-toggle" aria-label="Theme umschalten" title="Theme umschalten">
-      <i class="fa fa-moon-o icon-moon" aria-hidden="true"></i>
-      <i class="fa fa-sun-o icon-sun" aria-hidden="true"></i>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle colour theme" aria-pressed="false" title="Toggle colour theme">
+      <span class="icon-moon">{% include icon.html name="moon" %}</span>
+      <span class="icon-sun">{% include icon.html name="sun" %}</span>
     </button>
   </div>
 </header>

@@ -1,111 +1,70 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 {% include head.html %}
 
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <div class="container">
     {% include header.html %}
 
-    <div class="post-container">
+    <main id="main" class="post-container">
       {{ content }}
-    </div>
+    </main>
 
     {% include footer.html %}
 
   </div>
 
   <script>
+    // Theme toggle
     (function() {
-      function applyIcon() {
+      function applyState(btn) {
         var isDark = document.documentElement.classList.contains('theme-dark');
-        var btn = document.getElementById('theme-toggle');
-        if (!btn) return;
-        // Only set state attributes; icons are handled via CSS based on aria-pressed
         btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-        btn.title = isDark ? 'Helles Theme aktivieren' : 'Dunkles Theme aktivieren';
+        btn.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
       }
-      function toggleTheme() {
-        var root = document.documentElement;
-        var btn = document.getElementById('theme-toggle');
-        var isDark = root.classList.contains('theme-dark');
-        var next = isDark ? 'light' : 'dark';
 
-        // Add pulse animation
-        if (btn) btn.classList.add('changing');
-
-        root.classList.remove('theme-dark','theme-light');
-        root.classList.add(next === 'dark' ? 'theme-dark' : 'theme-light');
-        try { localStorage.setItem('theme', next); } catch(e) {}
-        applyIcon();
-
-        // Remove pulse animation after completion
-        if (btn) setTimeout(() => btn.classList.remove('changing'), 300);
-      }
       document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('theme-toggle');
-        if (btn) {
-          btn.addEventListener('click', toggleTheme);
-          applyIcon();
-        }
-      });
-    })();
+        if (!btn) return;
 
-    // Scroll animations
-    (function() {
-      if (!('IntersectionObserver' in window)) return;
+        applyState(btn);
 
-      const animateOnScroll = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-in');
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-      );
+        btn.addEventListener('click', function() {
+          var root = document.documentElement;
+          var next = root.classList.contains('theme-dark') ? 'light' : 'dark';
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.querySelectorAll('.post-item, .posts h1, .post-container > *');
-        elements.forEach(el => {
-          el.classList.add('animate-on-scroll');
-          animateOnScroll.observe(el);
+          btn.classList.add('changing');
+          root.classList.remove('theme-dark', 'theme-light');
+          root.classList.add(next === 'dark' ? 'theme-dark' : 'theme-light');
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          applyState(btn);
+          setTimeout(function() { btn.classList.remove('changing'); }, 300);
         });
       });
     })();
 
-    // Page transitions
+    // Reveal-on-scroll for post listings
     (function() {
-      function showPage() {
-        document.body.classList.remove('page-transitioning');
-        document.body.classList.add('page-loaded');
-      }
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-      document.addEventListener('DOMContentLoaded', showPage);
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      // Handle browser back/forward button
-      window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-          // Page was loaded from bfcache (back/forward cache)
-          showPage();
-        }
-      });
-
-      document.addEventListener('click', (e) => {
-        const link = e.target.closest('a');
-        if (!link || !link.href || link.target) return;
-        if (link.hostname !== window.location.hostname) return;
-        // Let in-page anchor links (e.g. #contact) scroll normally instead of
-        // triggering a full page transition/reload.
-        const isSamePageHash = link.hash &&
-          link.pathname === window.location.pathname &&
-          link.search === window.location.search;
-        if (isSamePageHash) return;
-        e.preventDefault();
-        document.body.classList.add('page-transitioning');
-        setTimeout(() => { window.location = link.href; }, 250);
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.post-item, .posts h1, .post-container > *').forEach(function(el) {
+          el.classList.add('animate-on-scroll');
+          observer.observe(el);
+        });
       });
     })();
   </script>

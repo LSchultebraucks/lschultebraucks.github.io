@@ -1,27 +1,36 @@
 # Self-hosted Web Fonts
 
-Das Redesign nutzt drei self-hosted Schriften (DSGVO-konform, kein externes CDN).
-Lege die folgenden **variablen woff2-Dateien** in dieses Verzeichnis (`assets/fonts/`).
-Solange die Dateien fehlen, fällt die Seite sauber auf System-Schriften zurück
-(`font-display: swap`), bleibt also funktionsfähig.
+Das Redesign nutzt drei self-hosted variable Schriften (DSGVO-konform, kein
+externes CDN). Die Dateien liegen bereits in diesem Verzeichnis:
 
-| Schrift        | Einsatz                | Akzeptierte Dateinamen (einer genügt)                 |
-|----------------|------------------------|-------------------------------------------------------|
-| Inter          | Fließtext / UI         | `Inter[wght].woff2` **oder** `Inter-Variable.woff2`   |
-| Space Grotesk  | Überschriften / Wordmark | `SpaceGrotesk[wght].woff2` **oder** `SpaceGrotesk-Variable.woff2` |
-| Fraunces       | Display / Name im Hero | `Fraunces[opsz,wght].woff2` **oder** `Fraunces-Variable.woff2` |
+| Datei                         | Schrift       | Einsatz                  | Achsen      |
+|-------------------------------|---------------|--------------------------|-------------|
+| `Inter-Variable.woff2`        | Inter         | Fließtext / UI           | `wght`      |
+| `SpaceGrotesk-Variable.woff2` | Space Grotesk | Überschriften / Wordmark | `wght`      |
+| `Fraunces-Variable.woff2`     | Fraunces      | Display / Name im Hero   | `opsz,wght` |
 
-Die `@font-face`-Definitionen stehen in `assets/css/main.css` (ganz oben).
+Alle drei sind **latin-Subsets** und OFL-lizenziert. Die `@font-face`-Definitionen
+stehen ganz oben in `assets/css/main.css`; `font-display: swap` sorgt dafür, dass
+die Seite auch dann lesbar bleibt, wenn eine Datei fehlt.
 
-## Bezugsquellen (alle OFL-lizenziert, kostenlos)
+## Aktualisieren
 
-- **Inter** — https://github.com/rsms/inter/releases (Datei `InterVariable.woff2` → in `Inter-Variable.woff2` umbenennen)
-- **Space Grotesk** — https://github.com/floriankarsten/space-grotesk (Ordner `fonts/variable/`)
-- **Fraunces** — https://github.com/undercasetype/Fraunces (Ordner `fonts/variable/`)
+Die Dateien stammen aus den Fontsource-Paketen (via jsDelivr):
 
-Alternativ via [Fontsource](https://fontsource.org/) die `*-variable`-Pakete von
-`@fontsource-variable/inter`, `@fontsource-variable/space-grotesk` und
-`@fontsource-variable/fraunces` herunterladen und die woff2 hierher kopieren.
+```bash
+curl -L -o Inter-Variable.woff2 \
+  "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
+curl -L -o SpaceGrotesk-Variable.woff2 \
+  "https://cdn.jsdelivr.net/npm/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2"
+curl -L -o Fraunces-Variable.woff2 \
+  "https://cdn.jsdelivr.net/npm/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2"
+```
 
-Beim Download über Google Fonts heißen die Dateien typischerweise `Inter[wght].woff2`
-usw. — diese Namen werden ebenfalls direkt erkannt.
+Originalquellen:
+
+- **Inter** — https://github.com/rsms/inter (OFL)
+- **Space Grotesk** — https://github.com/floriankarsten/space-grotesk (OFL)
+- **Fraunces** — https://github.com/undercasetype/Fraunces (OFL)
+
+Wenn eine Datei umbenannt wird, müssen `assets/css/main.css` (`@font-face`) und
+die `<link rel="preload">`-Zeilen in `_includes/head.html` mitgezogen werden.
