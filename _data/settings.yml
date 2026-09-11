@@ -1,24 +1,16 @@
-# Change 'comments' to true for Disqus comments
-disqus:
-  comments: false
-  disqus_shortname: ''
-
-# If you are not using Google Analytics, please change 'google-ID' to an empty string
+# Google Analytics 4 measurement ID (e.g. 'G-XXXXXXXXXX').
+# Leave empty to ship no analytics at all — the snippet is then not rendered.
 google-ID: ''
 
 menu: []
 
-# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+# Icons are inline SVG, defined in _includes/icon.html — 'icon' must match a name there.
 social:
-- {icon: 'github', link: 'https://github.com/LSchultebraucks'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/lasse-schultebraucks-407b54175/'}
-- {icon: 'xing', link: 'https://www.xing.com/profile/Lasse_Schultebraucks/cv'}
+- {icon: 'github',   name: 'GitHub',   link: 'https://github.com/LSchultebraucks'}
+- {icon: 'linkedin', name: 'LinkedIn', link: 'https://www.linkedin.com/in/lasse-schultebraucks-407b54175/'}
+- {icon: 'xing',     name: 'XING',     link: 'https://www.xing.com/profile/Lasse_Schultebraucks/cv'}
 
 # Customize site text
-pagination:
-  next_page: 'Newer'
-  previous_page: 'Older'
-
 sharing_button_prompt: 'Feel free to share!'
 
 related_posts: 'You may also enjoy:'

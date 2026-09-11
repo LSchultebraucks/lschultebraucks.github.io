@@ -1,29 +1,41 @@
 # Site Build Settings
 
-# Jekyll-paginate-v2 configuration
-#  pagination:
-#   enabled: true
-#   per_page: 5
-#   permalink: '/page/:num/'
-#   title: ':title - page :num of :max'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
-
-# jekyll-paginate configuration
-paginate:            5
+# Canonical site URL. Required by jekyll-seo-tag for correct canonical/og tags,
+# by jekyll-sitemap for absolute sitemap entries and by jekyll-feed.
+url:         "https://lasseschultebraucks.com"
+baseurl:     ""
 
 # Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           none
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+markdown:    kramdown
+highlighter: rouge
+# permalink: none => /:categories/:title.html
+# Changing this (or a post's categories) changes live URLs — don't.
+permalink:   none
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'Lasse Schultebraucks'
-description:	       'Senior IT Consultant'
-author:              'Lasse Schultebraucks'
+title:       "Lasse Schultebraucks"
+description: "Senior IT Consultant"
+author:      "Lasse Schultebraucks"
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+# Default social sharing image (og:image / twitter:image) for jekyll-seo-tag
+image:       "/assets/img/lasse.jpg"
+
+twitter:
+  card: summary_large_image
+
+social:
+  name: "Lasse Schultebraucks"
+  links:
+    - https://github.com/LSchultebraucks
+    - https://www.linkedin.com/in/lasse-schultebraucks-407b54175/
+    - https://www.xing.com/profile/Lasse_Schultebraucks/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
