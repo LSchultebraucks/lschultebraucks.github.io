@@ -4,6 +4,7 @@ title: "Creating a blog with GitHub pages"
 author: "Lasse Schultebraucks"
 categories: Random
 comments: true
+tags: ["Software Development"]
 ---
 
 I recently moved my blog. Again... WordPress (finally) died for me and now I can host my blog with an own domain, a SSL certificate totally free.

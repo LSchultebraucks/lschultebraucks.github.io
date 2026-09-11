@@ -4,6 +4,7 @@ title: "Why Python is probably the programming language for dealing with Big Dat
 author: "Lasse Schultebraucks"
 comments: true
 
+tags: ["AI & Machine Learning"]
 ---
 
 Python is a very amazing programming language and is very popular these days, so you have probably heard about Python already, you have tried it out or you use it even as your main programming language at work. Therefore I want to talk in this blog post why Python is the language (or at least one great language) when it comes to dealing and working with Big data.
@@ -16,7 +17,7 @@ My inspiration for this video actually came from a talk from Jake Vanderplas at 
 
 In the first few minutes of his talk he explains how astronomers work and what they do. So first he makes clear that astronomers don’t watch through classic telescopes like everybody would expect, they have big telescopes like the Hubble Space telescope or the Kepler telescope. These telescopes collect big data chunks with various features but they don’t make clear pictures of e.g. whole planets. To get information out this information, they write statistical code mostly based on Python. In the last year astronomers really explored the possibilities of Open Source. So e.g. the whole Kepler project code is online on [GitHub](https://github.com/KeplerGO). He also talks about the James Webb Space telescope, which should replace the Hubble Space telescope. But instead of watching the visible light it will watching infrared light, to get better images from exoplanets and get general more information about exoplanets. And like the code for Kepler, the code for the data analysis of the James Webb Space telescope is also mostly written in Python and is online at [GitHub](https://github.com/STScI-JWST). As a last telescope he mentioned the Large Synoptic Survey Telescope which is a ground based telescope with the largest digital camera ever created with the size of 3 GigaPixel. So the telescope will make two exposures every 30 seconds and creates 15-30 TerraByte per night with a final 10 year catalog of hundreds of PetaBytes of data. This is very impressive! And again, the software for the data analysis is mostly written in Python (and C++) and you can check it out again at [GitHub](https://github.com/lsst-ts). So according to Jake Vanderplas, there was currently a big revolution in the astronomy in the last ten years. Python got way more important to the scientific field in general, so e.g. Python seems to became the primary language for astronomers in the last 10 years.
 
-![Software in Astronomy]({{site.url}}/assets/softwareAstronomy.jpg "Software in Astronomy")
+![Software in Astronomy]({{site.url}}/assets/softwareAstronomy.jpg "Software in Astronomy"){: loading="lazy" decoding="async"}
 
 ### So why Python?
 
@@ -27,7 +28,7 @@ Scientist work with a wide variety of systems, databases and interfaces. So inst
 2. “Batteries Included” + Third-Party Modules
 As another reason he says that Python is also so important for scientists, because there are so many tools already included in Pythons Standard Library and the scientific stack in the last years increased heavily.
 
-![The Science Stack of Python]({{site.url}}/assets/pythonStack.jpg "The Science Stack of Python")
+![The Science Stack of Python]({{site.url}}/assets/pythonStack.jpg "The Science Stack of Python"){: loading="lazy" decoding="async"}
 
 ### My view on Python
 

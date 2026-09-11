@@ -4,6 +4,8 @@ title: "TIL: Multivariate Linear Regression, Polynomial Regression and more abou
 author: "Lasse Schultebraucks"
 categories: Machine Learning
 comments: true
+math: true
+tags: ["AI & Machine Learning"]
 ---
 
 Today I learned about Multivariate Linear Regression, Polynomial Regression and more about Gradient Descent.

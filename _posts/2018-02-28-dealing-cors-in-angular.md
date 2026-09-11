@@ -4,6 +4,7 @@ title: "Dealing with CORS in Angular (development)"
 author: "Lasse Schultebraucks"
 categories:  Angular
 comments: true
+tags: ["Frontend"]
 ---
 
 Cross-origin ressource sharing (CORS) is a mechanism used in HTTP to prevent browser and webclients requesting from another domains. Some requests may  work, others may not. The purpose of CORS is to determine if it is safe to communicate in regards of server and client.

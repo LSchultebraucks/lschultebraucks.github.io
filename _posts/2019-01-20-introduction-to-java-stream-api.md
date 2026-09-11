@@ -4,6 +4,7 @@ title: "Introduction to Java Stream API"
 author: "Lasse Schultebraucks"
 categories: [Java]
 comments: true
+tags: ["Java & Backend"]
 ---
 
 Java Stream API is there since Java 8. It is used to express computation on data is a short and elegant way. In the following post I will introduce you to the most common methods to give you an idea what you can achieve with the Java Stream API.

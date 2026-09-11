@@ -3,6 +3,7 @@ layout: post
 title: "Data Visualization with Python"
 author: "Lasse Schultebraucks"
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 This blog post is part of a series, where I talk about concepts and algorithms in Machine Learning.  In this blog post I do not want to talk about any concept or algorithm, but about data visualization with Python. Data Visualization with Python is very important, especially for Machine Learning, because you want to explore your data and gain knowledge about the data set you work with, so that you can select good features. I won't explain the following plots and charts in depth, because most of them are very similar and should just give you some ideas how you can plot your data. You will find all examples of the following plots and charts on [GitHub](https://github.com/LSchultebraucks/matplotlib_examples).
@@ -30,7 +31,7 @@ plt.show()
 
 As a result there will come this plot:
 
-![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/basic_plot.png)
+![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/basic_plot.png){: loading="lazy" decoding="async"}
 
 ### Bar charts
 
@@ -54,7 +55,7 @@ plt.legend()
 plt.show()
 ```
 
-![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/bar_chart.png)
+![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/bar_chart.png){: loading="lazy" decoding="async"}
 
 ### Scatter plots
 
@@ -77,7 +78,7 @@ plt.legend()
 plt.show()
 ```
 
-![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/scatter_plot.png)
+![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/scatter_plot.png){: loading="lazy" decoding="async"}
 
 At the most time I use scatter plots to visualize how certain features are connected to the target label. Lets assume that we have a binary features like this. Then we can see, that we could easily work here with support vector machines, because we could separate the two division with a line. If there are not a clear division between the two regions and there are existing multiple regions, then maybe decisions tree are a better solution.
 
@@ -102,7 +103,7 @@ plt.title('Pie Chart')
 plt.show()
 ```
 
-![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/pie_chart.png)
+![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/pie_chart.png){: loading="lazy" decoding="async"}
 
 ### Mosaic
 
@@ -124,7 +125,7 @@ mosaic(data, gap=0.01, title='Who knows multiple foregin languages? - Mosaic Cha
 pylab.show()
 ```
 
-![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/mosaic_chart.png)
+![](https://raw.githubusercontent.com/LSchultebraucks/matplotlib_examples/master/pictures/mosaic_chart.png){: loading="lazy" decoding="async"}
 
 ### Resume
 

@@ -4,6 +4,7 @@ title: "Playing Darts"
 author: "Lasse Schultebraucks"
 categories:  [Non-Tech,Darts]
 comments: true
+tags: ["Career & Life"]
 ---
 
 After a long time without blog post and over a year of pandemic, this is the first blog post again from me. 
@@ -24,4 +25,4 @@ That's it for now, when I throw my first 180 I will definitely share it on Twitt
 
 Edit: [I did it](https://twitter.com/LSchultebraucks/status/1383047550685577217)!
 
-![]({{site.url}}/assets/dart180.jpg)
+![]({{site.url}}/assets/dart180.jpg){: loading="lazy" decoding="async"}

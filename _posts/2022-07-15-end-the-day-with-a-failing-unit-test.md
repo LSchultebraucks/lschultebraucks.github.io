@@ -4,6 +4,7 @@ title: "End the day with a failing unit test"
 author: "Lasse Schultebraucks"
 categories:  [TDD]
 comments: true
+tags: ["Software Development"]
 ---
 
 In the last days I tried to end the day with a failing unit test. This may sound wrong at first, but in the end it offers many advantages, which I would like to explain in the following.

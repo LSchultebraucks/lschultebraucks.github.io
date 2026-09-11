@@ -4,6 +4,7 @@ title: "One programming language per year"
 author: "Lasse Schultebraucks"
 categories:  [Learning, Programming Languages]
 comments: true
+tags: ["Career & Life", "Software Development"]
 ---
 
 Constant learning is an important concept as a software developer, especially as a consultant.

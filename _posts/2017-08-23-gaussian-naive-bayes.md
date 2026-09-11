@@ -3,6 +3,7 @@ layout: post
 title: "Gaussian Naive Bayes"
 author: "Lasse Schultebraucks"
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 So I currently learning some machine learning stuff and therefore I also exploring some interesting algorithms I want to share here. This time I want to talk about the Gaussian Naive Bayes algorithm, which is a simple classification algorithm which is based on the Bayes' theorem.
@@ -11,7 +12,7 @@ So I currently learning some machine learning stuff and therefore I also explori
 
 Bayes Theorem is named after Thomas Bayes (1701-1761), who first introduced Bayes' theorem which then later get developed further by Pierre Simon Laplace, who published the modern equation of the Bayes Theorem in 1812. In general Bayes Theorem describes the probability of an event, based on prior knowledge of conditions be related of conditions to the event. So it basically fits perfectly for machine learning, because that is exactly what machine learning does: making predictions for the future based on prior experience. Mathematically you can write the Bayes theorem as following:
 
-![Bayes Theorem]({{site.url}}/assets/bayes_theorem.svg)
+![Bayes Theorem]({{site.url}}/assets/bayes_theorem.svg){: loading="lazy" decoding="async"}
 
 Let's break the equation down:
 

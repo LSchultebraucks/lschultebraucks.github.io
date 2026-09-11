@@ -4,6 +4,7 @@ title: "Migrations with Spring Boot and Flyway"
 author: "Lasse Schultebraucks"
 categories:  [Spring Boot, Java, Hibernate, Flyway, Database]
 comments: true
+tags: ["Java & Backend"]
 ---
 
 In the last month I worked a lot with migrations in a Spring Boot application. I used [Flyway](https://flywaydb.org/) as a version control tool to manage migration scripts. Flyway is a great and easy to use tool to deal with migrations in a Java project with a SQL database.

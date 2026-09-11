@@ -5,6 +5,7 @@ author: "Lasse Schultebraucks"
 categories:  JavaScript
 image: "/assets/mongodb.png"
 comments: true
+tags: ["Frontend", "Java & Backend"]
 ---
 
 Mongoose is a node module and works as an API for MongoDB, which is a NoSQL database. With the power of mongoose you can easily write schemas for your MongoDB database and perform CRUD operations on it.

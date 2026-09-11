@@ -5,6 +5,7 @@ author: "Lasse Schultebraucks"
 categories: [Life, Books]
 comments: true
 
+tags: ["Career & Life"]
 ---
 
 In the following post I want to discuss some aspects about books, e-books and audio books. 

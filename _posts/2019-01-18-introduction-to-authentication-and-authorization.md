@@ -4,6 +4,7 @@ title: "Introduction to Authentication and Authorization"
 author: "Lasse Schultebraucks"
 categories: [Security]
 comments: true
+tags: ["Java & Backend", "Software Development"]
 ---
 
 Lately I have dealt a lot of with authentication and authorization. Therefore I will probably blog a little bit more about these topics in the next weeks. But before that happens I want to talk about specific technologies and tools I want to talk a little bit about the basics.

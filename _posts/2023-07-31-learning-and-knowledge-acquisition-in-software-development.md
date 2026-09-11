@@ -4,6 +4,7 @@ title: "Learning and Knowledge Acquisition in Software Development"
 author: "Lasse Schultebraucks"
 categories:  [Software Development]
 comments: true
+tags: ["Software Development", "Career & Life"]
 ---
 
 Software development is a dynamic field that is constantly evolving. Therefore, it is crucial for software developers to continuously acquire new knowledge and keep existing knowledge up to date. In the process of acquiring knowledge in software development, we can distinguish three categories:

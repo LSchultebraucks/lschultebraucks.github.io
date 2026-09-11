@@ -3,6 +3,7 @@ layout: post
 title: Support Vector Machines (SVM)
 categories: [Python, Machine Learning]
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 This blog post is part of a series, where I talk about concepts and algorithms in Machine Learning. In this part I want to talk about another popular algorithm, which is widely used for solving classification and regression problems. I am of course talking about Support Vector Machines (SVM).
@@ -17,7 +18,7 @@ Maybe you say now, that this probably only works for a low dimensional problem, 
 
 To clear everything up, I explain quickly what it is all about the linear and non-linear data thing. We talk about linear data, when we can classify the data with a linear classifier. The linear classifier makes his classification decision based on a linear combination of characteristics. The characteristics are also known as features in machine learning. The following picture will make things more clear.
 
-![SVM]({{site.url}}/assets/svm_1.png)
+![SVM]({{site.url}}/assets/svm_1.png){: loading="lazy" decoding="async"}
 
 In figure A we can separate the target labels linear with a line (like Support Vector Machines do classification with a decision line). A linear classifier can do this with a linear combination of characteristics. We could use e.g. Support Vector Machines do build a model, but we could also use many other linear classification methods like quadratic classification.
 
@@ -80,12 +81,12 @@ Accuracy: 1.0
 ```
 Okay, this seems to work pretty well, but how does a decision line of a Support Vector Machine looks like? First lets plot the iris data set to see how the data set looks like. To make things easier, lets just concentrate on the first two features: sepal length and sepal width.
 
-![Sepal length and Sepal width]({{site.url}}/assets/svm_2.png)
+![Sepal length and Sepal width]({{site.url}}/assets/svm_2.png){: loading="lazy" decoding="async"}
 
 
 With the Support Vector Machine algorithm we could probably separate now the red group from the other two groups (orange and grey).
 
-![Support Vector for Sepal length and Spela width]({{site.url}}/assets/svm_3.png)
+![Support Vector for Sepal length and Spela width]({{site.url}}/assets/svm_3.png){: loading="lazy" decoding="async"}
 
 So this would probably look like this. But we still have the problem, that the orange and grey group are difficult to separate. We could guess, that a higher sepal width and a higher sepal length is a sign, that the entry is from the grey group, but fortunately we do not have to assume such things, because we have a third feature and a fourth features, petal length and petal width, so that we can group them with decision lines in higher dimensions. The example above should show the general principle of Support Vector Machines. Here we do not have a binary classification problem (2 labels), but we can easily separate the red group from the grey and orange group by a decision line by using only two features out of four features.
 
@@ -93,12 +94,12 @@ So this would probably look like this. But we still have the problem, that the o
 
 For humans this seems pretty intuitive. We just drawing a line to separate the different labeled classes from each other. But how does Support Vector Machines solve this problem? The SVM want to find are so called maximum-margin hyperplane.
 
-![Hyperplane]({{site.url}}/assets/svm_4.png)
+![Hyperplane]({{site.url}}/assets/svm_4.png){: loading="lazy" decoding="async"}
 
 The hyperplane is the line with the biggest margin to both groups. We have called the line above decision line, but the mathematical correct term is hyperplane, because in dimensions higher than two, it will be not a line anymore.
 We will give the Support Vector Machine algorithm a bunch of labeled vectors as a training set. All vectors are p dimensional, p is the number of features we have in our training set. To find the maximum margin hyperplane, we have to maximize the margin to every nearest point of each target group. In a binary classification, we can declare the labels of the two target groups as -1 and 1. The hyperplane as a set of points can be described as
 
-![hyperplane]({{site.url}}/assets/svm_5.gif)
+![hyperplane]({{site.url}}/assets/svm_5.gif){: loading="lazy" decoding="async"}
 
 
 where x is the normal vector to the hyperplane and b is a bias. A normal vector simply is an orthogonal standing vector to a line or plane. If you are familiar with linear algebra, this may look familiar to you. It is like the Hesse normal form, except that w does not have to be a unit vector.
@@ -115,7 +116,7 @@ Until know we have talked about linear examples and how Support Vector Machines 
 ### How does the Kernel method works?
 The kernel method are contains are so called kernel function. These function map the non-linear separable input space into a higher dimensional linear separable feature space. And in this new higher dimensional linear separable feature space Support Vector Machines can work as normal. The kernel method then maps the solutions back, so that in the non-linear separable input space you then have a non-linear solution.
 
-![Hyperplane]({{site.url}}/assets/svm_6.png)
+![Hyperplane]({{site.url}}/assets/svm_6.png){: loading="lazy" decoding="async"}
 
 In the example above we have a two dimensional feature space, which is non-linear. With the kernel function we can map the input space into a three dimensional feature space. In this feature space we then can separate the training set linear. When we map the solution back to the input space we get a non-linear solution.
 ### Implementation

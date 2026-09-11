@@ -4,6 +4,7 @@ title: "Efficient Full-Stack Application Development Using Spring Profiles"
 author: "Lasse Schultebraucks"
 categories:  [SoftwareDevelopment]
 comments: true
+tags: ["Java & Backend"]
 ---
 
 The development of full-stack applications often involves integrating various features, user roles, and user interfaces. In this context, the Spring Framework, in conjunction with Spring Boot, can offer a powerful solution. A crucial tool in the Spring arsenal is the use of "Profiles," which allow configuring applications for different environments, thereby enhancing development efficiency. In this blog post, we'll delve into Spring Profiles and explore how they can be used for developing a full-stack application using a specific scenario.
@@ -63,7 +64,7 @@ spring.profiles.active=dev
 
 #### If you are using Intellij or another IDE which supports Spring, you can also activated your Spring profile in the run configurations:
 
-![Spring Profiles]({{site.url}}/assets/img/springProfilesIntellij.png)
+![Spring Profiles]({{site.url}}/assets/img/springProfilesIntellij.png){: loading="lazy" decoding="async"}
 
 
 ### 4. Use the `UserService` in your application:

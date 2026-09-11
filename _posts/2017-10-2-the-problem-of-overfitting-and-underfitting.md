@@ -3,6 +3,7 @@ layout: post
 title: "The Problem of overfitting and underitting"
 author: "Lasse Schultebraucks"
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 This blog post is part of a series, where I talk about concepts and algorithms in Machine Learning.
@@ -13,7 +14,9 @@ In this part I want to talk about Overfitting and Underfitting, which are common
 
 Overfitting often happens when your train your model with too much data. Then the model learn from the noise and inaccurate data entries from the data set. If the model then should predict the target of the new data, it does not categorize the data correct, because there is too much noise and details. Overfitting often happens with non-parametric and non-linear methods, because this types of machine learning algorithms have more freedom in building a model based on the data set and therefore these types of algorithms can really build unrealistic models. A solution to avoid overfitting is using a linear algorithm like Support Vector Machines (SVM) if you have linear data or using parameters like the maximal depth if you are using decision trees.
 
-<img src="/assets/2000px-Overfitting.svg.png" width="400px" height="400px">
+<img src="{{ '/assets/2000px-Overfitting.svg.png' | relative_url }}"
+     alt="Overfitting versus a well-fitted model"
+     width="400" height="400" loading="lazy" decoding="async">
 
 In the example above we can see lines of an overfitted model an a line of a model with a regular model. The green line is from the overfitted model. It is very complex and overreacts for every point instead of just finding a moderate way like the black line from the regular model.
 

@@ -4,6 +4,7 @@ title: "Basic Authentication"
 author: "Lasse Schultebraucks"
 categories:  [Rest, Security]
 comments: true
+tags: ["Java & Backend", "Software Development"]
 ---
 
 In one of my latest blog posts I talked about [authentication and authorization](https://lasseschultebraucks.com/security/2019/01/18/introduction-to-authentication-and-authorization.html).

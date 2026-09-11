@@ -4,6 +4,8 @@ title: "TIL: Logistic Regression"
 author: "Lasse Schultebraucks"
 categories: Machine Learning
 comments: true
+math: true
+tags: ["AI & Machine Learning"]
 ---
 
 In the last few days I learned about Logistic Regression as one method to solve classification problems.
@@ -26,7 +28,7 @@ logistic function. In the following I will use logistic function and logistic re
 
 The Logistic function $$ g(z) $$ looks as following:
 
-![](https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg)
+![](https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg){: loading="lazy" decoding="async"}
 
 Because the function maps any real number to $$ (0,1) $$ it is very useful for defining a hypothesis for a binary classification problem.
 

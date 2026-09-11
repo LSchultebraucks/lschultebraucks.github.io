@@ -4,6 +4,7 @@ title: "Are you busy or productive?"
 author: "Lasse Schultebraucks"
 categories:  [Non-Tech]
 comments: true
+tags: ["Career & Life"]
 ---
 
 What does your calendar look like? Is it packed with meetings or do you have enough time for concentrated work?

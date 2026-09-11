@@ -3,6 +3,7 @@ layout: post
 title: "Testing services in Angular"
 author: "Lasse Schultebraucks"
 comments: true
+tags: ["Frontend", "Software Development"]
 ---
 
 Testing in Software Development is essential. In this blog post I will demonstrate how Testing in Angular works by testing a service with Jasmine and Karma by build a simple Angular application. I also try to answer the question why and how to test.
@@ -181,11 +182,11 @@ export class AppService {
 
 After we have done this, we can run npm test. This command opens a new browser window. It seems that all our test have passed.
 
-![]({{site.url}}/assets/anguarl_services_tests_passed.png)
+![]({{site.url}}/assets/anguarl_services_tests_passed.png){: loading="lazy" decoding="async"}
 
 Great! Let us go back to our tests and let them fail by changing a value in the assertions. I will change in the second the expected value from 0 to 1. We will have now a failing test.
 
-![]({{site.url}}/assets/angular_testing_services_failed.png)
+![]({{site.url}}/assets/angular_testing_services_failed.png){: loading="lazy" decoding="async"}
 
 We expected the length of an empty array to be 1, but this is wrong. This time we intentionally crashed our test, so let us correct it quickly by changing the expected value from 1 to 0.
 
@@ -284,15 +285,15 @@ export class AppComponent implements OnInit{
 
 The app.component.ts creates a simple form in his ngOnInit() cycle. I do it with the FormBuilder, which I declare in the constructor next to our AppService, which I use in the onSubmit() method to add a new item. Our application now looks like following (I have added some bootstrap to make it prettier).
 
-![]({{site.url}}/assets/angular-testing.png)
+![]({{site.url}}/assets/angular-testing.png){: loading="lazy" decoding="async"}
 
 We can now type in the name of our new item we want to add and can add the item by clicking on the button. This will update the count on the header on the top and will also show up all items in a list in the bottom.
 
-![]({{site.url}}/assets/angular-testing-items-added.png)
+![]({{site.url}}/assets/angular-testing-items-added.png){: loading="lazy" decoding="async"}
 
 By clicking on the Delete button we can delete the items one by one.
 
-![]({{site.url}}/assets/angular-testing-items-deleted.png)
+![]({{site.url}}/assets/angular-testing-items-deleted.png){: loading="lazy" decoding="async"}
 
 ### Resume
 

@@ -3,6 +3,7 @@ layout: post
 title: "Android Firebase Authentication with Firebase UI"
 author: "Lasse Schultebraucks"
 comments: true
+tags: ["Frontend"]
 ---
 
 Many apps need safe, fast and easy user authentication to save user personal data. To achieve this, you do not have to build your own authentication system and you do not want to care much about backend.

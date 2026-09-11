@@ -4,6 +4,7 @@ title: "Why do we need Voice systems?"
 author: "Lasse Schultebraucks"
 categories: [Voice Apps, Alexa, Google Assistant]
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 Voice Platforms like Alexa and Google Assistant became very popular in the last few years. 

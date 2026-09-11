@@ -4,6 +4,7 @@ title: "TIL: Minimizing cost functions with gradient descent"
 author: "Lasse Schultebraucks"
 categories:  Machine Learning
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 Today I learned about gradient descent and how you can minimize cost function for liner regression problems with gradient descent.
@@ -17,7 +18,7 @@ The gradient descent algorithms is as following:
 
 *repeat until convergence:*
 
-![](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20-%20%5Calpha%20%5Cfrac%7B%5Cdelta%7D%7B%5Cdelta%20%5Ctheta_j%7D%20J%28%5Ctheta_0%2C%5Ctheta_1%29)
+![](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20-%20%5Calpha%20%5Cfrac%7B%5Cdelta%7D%7B%5Cdelta%20%5Ctheta_j%7D%20J%28%5Ctheta_0%2C%5Ctheta_1%29){: loading="lazy" decoding="async"}
 
 *J = 0,1* representing the feature index numbers. For each iteration every ![](https://latex.codecogs.com/gif.latex?%5Ctheta) should update simultaneously.
 
@@ -29,4 +30,4 @@ If the learning rate is to small, gradient descent can be slow.
 The following figure shows an example of gradient descent. The *x* and *z* axis are ![](https://latex.codecogs.com/gif.latex?%5Ctheta)s and the *y* axis is the value of our cost function *J* of our hypothesis *h*.
 With each iteration our hypothesis changes and we approximate at the local minimum. 
 
-![]({{site.url}}/assets/gradient_descent_method.png)
+![]({{site.url}}/assets/gradient_descent_method.png){: loading="lazy" decoding="async"}

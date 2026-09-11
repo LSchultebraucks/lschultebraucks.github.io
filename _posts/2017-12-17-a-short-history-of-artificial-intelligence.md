@@ -3,6 +3,7 @@ layout: post
 title: A Short History of Artificial Intelligence
 categories: [AI, Machine Learning]
 comments: true
+tags: ["AI & Machine Learning"]
 ---
 
 What is Artificial Intelligence? What has Artificial Intelligence reached in the past? What are appreciable milestones of Artificial Intelligence in the last years? What will Artificial Intelligence solve in 5 years, 20 years, 50 years or 100 years from now? And how will look Artificial Intelligence the future?
@@ -43,7 +44,7 @@ The history of Artificial Intelligence is quite interesting and started around 1
 
 In 1920 the Czech writer Karel Čapek published a science fiction play named Rossumovi Univerzální Roboti (Rossum’s Universal Robots), also better known as R.U.R. The play introduced the word robot. R.U.R. deals about a factory, which creates artificial people named as robots. They differentiate from today’s term of robot. In R.U.R. robots are living creatures, who are more similar to the term of clones. The robots in R.U.R. first worked for the humans, but then there comes are robot rebellion which leads to the extinction of the human race.
 
-![](https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/8/87/Capek_play.jpg?w=730&ssl=1)
+![](https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/8/87/Capek_play.jpg?w=730&ssl=1){: loading="lazy" decoding="async"}
  
 
 The play is quite interesting, because of different reason. First it is introducing the term robot, even if represents not exactly the modern idea of robots. Next it is also telling the story of the creation of robots, so some kind of artificial intelligence, which first seems to be a positive effect to the humans, but later on the is the robot rebellion which threat the whole human race.
@@ -54,7 +55,7 @@ Artificial Intelligence in literature and movies is a big topic for its own. The
 
 Alan Turing was born on 23th June 1912 in London. He is widely known, because the encrypted the code of the enigma, which were used from Nazi Germany to communicate. Alan Turing’s study also led to his theory of computation, which deals about how efficient problems can be solved. His presented his idea in the model of the Turing machine, which is today still a popular term in Computer Science. The Turing machine is an abstract machine, which can ,despite the model’s simplicity, construct any algorithm’s logic. Because of discoveries in neurology, information theory and cybernetics in the same time researches and with them Alan Turing created the idea that it is possible to build an electronic brain.
 
-![](https://i1.wp.com/upload.wikimedia.org/wikipedia/commons/5/55/Turing_test_diagram.png?w=730&ssl=1)
+![](https://i1.wp.com/upload.wikimedia.org/wikipedia/commons/5/55/Turing_test_diagram.png?w=730&ssl=1){: loading="lazy" decoding="async"}
 
 Some years after the end of World War 2, Turing introduced his widely known Turing Test, which was an attempt to define machines intelligent. The idea behind the test was that are machine (e.g. a computer) is then called intelligent, if a machine (A) and a person (B) communicate through natural language and a second person (C), a so-called elevator, can not detect which of the communicators (A or B) is the machine.
 
@@ -90,7 +91,7 @@ The second AI Winter came in the later 80s and early 90s after a series of finan
 
 After many ups and downs Deep Blue became the first chess computer to beat a world chess champions, Garry Kasparov. On 11 May 1997 IBM’s chess computer defeated Garry Kasparov after six games with 3½–2½.
 
-![](https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/399px-Deep_Blue.jpg?resize=332%2C498&ssl=1)
+![](https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/399px-Deep_Blue.jpg?resize=332%2C498&ssl=1){: loading="lazy" decoding="async"}
 
 Deep Blue used tree search to calculate up to a maximum of 20 possible moves. It evaluated positions by a value function mainly written by hand, which was later optimized by analyzing thousand of games. Deep Blue also contained an opening and endgame library of many grandmaster games.
 

@@ -4,6 +4,7 @@ title: "My 7 Most Used Software Design Patterns"
 author: "Lasse Schultebraucks"
 categories:  [Software Development]
 comments: true
+tags: ["Software Development"]
 ---
 
 As a software developer, I have encountered various challenges over time and found certain software design patterns to be particularly useful and versatile.
